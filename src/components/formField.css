@@ -1,0 +1,81 @@
+* {
+	font-family: sans-serif;
+}
+
+.input {
+	width: 100%;
+	padding: 10px 20px;
+	margin-top: 5px;
+	color: #222;
+	font-weight: 700;
+	letter-spacing: 0.05rem;
+	box-sizing: border-box;
+	border: none;
+	outline: 0;
+	border-width: 0 0 2px;
+	border-color: blue;
+	background-color: transparent;
+	box-sizing: border-box;
+}
+
+input:focus {
+	border-bottom: 1px solid gray;
+}
+
+input::placeholder {
+	color: gray;
+	font-weight: normal;
+}
+
+.label {
+	width: 90%;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	font-size: x-small;
+	border-radius: 10px;
+}
+
+.field {
+	width: 90%;
+	margin-top: 10px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: none;
+	background-color: rgb(239, 239, 239);
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgb(210, 209, 209);
+}
+
+.fieldError {
+	width: 90%;
+	margin-top: 10px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: none;
+	background-color: rgb(252, 181, 168);
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px rgb(210, 209, 209);
+}
+
+.field:focus {
+	background-color: lightgray;
+	border-color: green;
+	color: #222;
+	border-bottom: 2px solid gray;
+}
+
+span {
+	align-self: start;
+	margin-top: 5px;
+	margin-left: 20px;
+	font-size: smaller;
+	font-weight: 600;
+	color: red;
+}
