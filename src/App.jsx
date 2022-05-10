@@ -9,6 +9,8 @@ function App() {
 		username: "",
 		email: "",
 		password: "",
+		OS: "",
+		hobbies: [],
 	};
 
 	return (
@@ -17,6 +19,8 @@ function App() {
 				<FormField type='text' name='username' placeholder='Username' label='Username' />
 				<FormField type='text' name='email' placeholder='Email' label='Email' />
 				<FormField type='password' name='password' placeholder='Password' label='Password' />
+				<FormField type='select' name='OS' placeholder='Operating System' label='Operating System' options={["MacOS", "Windows", "Linux"]} />
+				<FormField type='checkbox' name='hobbies' placeholder='Hobbies' label='Hobbies' options={["reading", "gaming", "sports", "problem solving"]} />
 			</Form>
 		</div>
 	);

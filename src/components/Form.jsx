@@ -1,6 +1,7 @@
 import React, { useState, useEffect, cloneElement, Children } from "react";
 import "./form.css";
 import { validate } from "../utils/validate";
+import { validateCheckbox } from "../utils/validateCheckbox";
 
 const Form = ({ initialState, children }) => {
 	const [state, setState] = useState(initialState);
@@ -8,7 +9,12 @@ const Form = ({ initialState, children }) => {
 	const [isSubmitted, setIsSubmitted] = useState(false);
 
 	const handleChange = (e) => {
-		setState((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
+		if (e.target.name === "hobbies") {
+			let newValues = validateCheckbox(state, e.target.value);
+			setState((prevState) => ({ ...prevState, [e.target.name]: newValues }));
+		} else {
+			setState((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
+		}
 	};
 
 	const handleSubmit = (e) => {
